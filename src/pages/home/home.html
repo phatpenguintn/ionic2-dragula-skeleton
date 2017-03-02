@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row padding style="height:100%">
+    <ion-col width-25 class="left">
+      <div class="header">Backlog</div>
+      <ion-list [dragula]='"tasks"' [dragulaModel]="q1">
+        <ion-card *ngFor="let item of q1"  class="note pink">
+          <div   [innerHtml]='item'>
+        </div >
+        </ion-card>
+      </ion-list>
+    </ion-col>
+ 
+    <ion-col width-25 class="left">
+      <div class="header">This Week</div>
+      <ion-list [dragula]='"tasks"' [dragulaModel]="q2">
+        <ion-card *ngFor="let item of q2"  class="note green">
+          <div   [innerHtml]='item'>
+        </div >
+        </ion-card>
+      </ion-list>
+    </ion-col>
+    <ion-col width-25 class="left">
+      <div class="header">Today</div>
+      <ion-list [dragula]='"tasks"' [dragulaModel]="q3">
+        <ion-card *ngFor="let item of q3"  class="note yellow">
+          <div   [innerHtml]='item'>
+        </div >
+        </ion-card>
+      </ion-list>
+    </ion-col>
+    <ion-col width-25 class="right">
+      <div class="header">Complete</div>
+      <ion-list [dragula]='"tasks"' [dragulaModel]="q4" >
+       <ion-card *ngFor="let item of q4" class="note blue">
+          <div  [innerHtml]='item' >
+        </div >
+        </ion-card>
+      </ion-list>
+    </ion-col>
+  </ion-row >
+</ion-content>
